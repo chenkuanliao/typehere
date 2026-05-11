@@ -5,8 +5,45 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <textarea id="typingCanvas" autofocus></textarea>
+    <div class="appShell">
+        <div class="panelBar" role="tablist" aria-label="Work panels">
+            <div id="panelTabs" class="panelTabs"></div>
+            <button id="addPanel" class="panelAction" type="button" title="New panel (Shift+Alt+N)" aria-label="New panel">+</button>
+            <button id="hotkeyHelpToggle" class="panelAction helpAction" type="button" title="Show hotkeys (Shift+Alt+?)" aria-expanded="false" aria-controls="hotkeyHelp">?</button>
+        </div>
+        <div id="hotkeyHelp" class="hotkeyHelp" hidden>
+            <div class="hotkeyHelpPanel" role="dialog" aria-label="Hotkeys">
+                <div class="hotkeyHelpTitle">Hotkeys</div>
+                <dl class="hotkeyList">
+                    <div>
+                        <dt>New panel</dt>
+                        <dd>Shift+Alt+N</dd>
+                    </div>
+                    <div>
+                        <dt>Previous panel</dt>
+                        <dd>Shift+Alt+Left or H</dd>
+                    </div>
+                    <div>
+                        <dt>Next panel</dt>
+                        <dd>Shift+Alt+Right or L</dd>
+                    </div>
+                    <div>
+                        <dt>Rename panel</dt>
+                        <dd>Shift+Alt+R</dd>
+                    </div>
+                    <div>
+                        <dt>Jump to panel</dt>
+                        <dd>Alt+1 through Alt+9</dd>
+                    </div>
+                    <div>
+                        <dt>Delete panel</dt>
+                        <dd>Shift+Alt+Backspace</dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+        <textarea id="typingCanvas" autofocus></textarea>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
-
